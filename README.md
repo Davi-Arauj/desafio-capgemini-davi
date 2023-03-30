@@ -16,6 +16,13 @@
 ```bash
 $ make up
 ```
+
+ - Para executar os testes execute o seguinte comando:
+
+ ```bash
+ $ make test
+ ```
+ 
 ### Este comando fará com que o projeto execute
 
 
