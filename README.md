@@ -21,7 +21,7 @@ $ make up
 
 ### Rotas disponíveis:
  * post -
-[localhost:3030/sequence](http:localhost:3030/sequence) <br>
+[localhost:3000/sequence](http:localhost:3000/sequence) <br>
     ```json
        {
         "letters": ["BUHDHB", "DBHUHD", "UUBUUU", "BHBDHH", "HDHUDB", "UDBDUH"]
@@ -30,7 +30,7 @@ $ make up
 <br>
 
  * get-
-[localhost:3030/stats](http:localhost:3030/stats) <br>
+[localhost:3000/stats](http:localhost:3000/stats) <br>
     ```json
         {
             "count_valid": 7,

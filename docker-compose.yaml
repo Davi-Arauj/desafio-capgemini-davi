@@ -1,4 +1,5 @@
 version: '3.7'
+
 services:
   db:
     image: mongo:4.2
@@ -10,3 +11,27 @@ services:
       MONGO_INITDB_DATABASE: capgemini
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      rede_capgemini:
+        ipv4_address: 172.24.0.3
+  
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node_app
+    restart: always
+    tty: true
+    ports:
+      - "3000:3000"
+    networks:
+      rede_capgemini:
+        ipv4_address: 172.24.0.2     
+
+networks:
+  external:
+  rede_capgemini:
+    driver: bridge
+    ipam:
+      config:
+       - subnet: 172.24.0.0/16

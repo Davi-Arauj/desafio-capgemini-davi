@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const MONGODB_DSN = 'mongodb://root:root@localhost:27017'
+const MONGODB_DSN = 'mongodb://root:root@172.24.0.3:27017'
 
 mongoose.connect(MONGODB_DSN)
 
